@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="m-12 inter">
+    <header>
+
+    </header>
+    <main>
+        <!-- main content container -->
+        <div class="flex flex-col gap-6 md:flex-row lg:flex-row">
+            <!--  container -->
+            <div class="flex-1 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- triangle  -->
+                <div class=" space-y-[50px] flex flex-col justify-center items-center bg-base-100 shadow-xl p-[40px]">
+                    <img class="h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)]" src="./images/triangle.png"
+                        alt="Shoes" />
+
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+                        <h2 class="text-2xl font-bold">Triangle</h2>
+                        <p class="text-[rgb(65,65,65)]">Area = 0.5 X b X h</p>
+                        <div class="flex max-w-full items-center gap-2">
+
+                            <input id="tb" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <span>cm</span>
+
+                            <input id="th" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
+                            <span>cm</span>
+                        </div>
+                        <div class="w-full">
+                            <button onclick="calculateTriangleArea()" class="w-full btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangle  -->
+                <div class="space-y-[50px] justify-center items-center  flex flex-col bg-base-100 shadow-xl p-[40px]">
+                    <img class="h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)]" src="./images/rectangle.png" alt="Shoes" />
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+
+                        <h2 class="-title text-2xl font-bold">Rectangle</h2>
+
+                        <p class="text-[rgb(65,65,65)]">Area = w X l</p>
+
+                        <div class="flex max-w-full items-center gap-2">
+
+                            <input id="rw" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="w">
+                            <span>cm</span>
+
+                            <input id="rl" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="l">
+                            <span>cm</span>
+                        </div>
+
+                        <div class="w-full">
+                            <button class="w-full btn btn-primary">Calculate</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Parallelogram  -->
+                <div class="space-y-[50px] justify-center items-center flex flex-col  bg-base-100 shadow-xl p-[40px]">
+                    <img class="h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)] " src="./images/parallelogram.png" alt="Shoes" />
+
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+                        <h2 class="-title text-2xl font-bold">Parallelogram</h2>
+                        <p class="text-[rgb(65,65,65)]">Area = b X h</p>
+
+                        <div class="flex max-w-full items-center gap-2">
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <span>cm</span>
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
+                            <span>cm</span>
+                        </div>
+
+                        <div class="w-full">
+                            <button class="w-full btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rhombus  -->
+                <div class="space-y-[50px] sustify-center items-center flex flex-col  bg-base-100 shadow-xl p-[40px]">
+                    <img class="h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)] " src="./images/rhombus.png" alt="Shoes" />
+
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+                        <h2 class="-title text-2xl font-bold">Rhombus</h2>
+                        <p class="text-[rgb(65,65,65)]">Area = 0.5 X d1 X d2</p>
+                        
+                        <div class="flex max-w-full items-center gap-2">
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d1">
+                            <span>cm</span>
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d2">
+                            <span>cm</span>
+                        </div>
+
+                        <div class=" w-full">
+                            <button class="w-full btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pentagon  -->
+                <div class="space-y-[50px] justify-center items-center flex flex-col  bg-base-100 shadow-xl p-[40px]">
+                    <img class="h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)] " src="./images/pentagon.png"
+                        alt="Shoes" />
+
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+                        <h2 class="-title text-2xl font-bold">Pentagon</h2>
+                        <p class="text-[rgb(65,65,65)]">Area = 0.5 X p X b</p>
+
+                        <div class="flex max-w-full items-center gap-2">
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="p">
+                            <span>cm</span>
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <span>cm</span>
+                        </div>
+
+                        <div class="w-full">
+                            <button class="w-full btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse  -->
+                <div class="space-y-[50px] sustify-center items-center  flex flex-col bg-base-100 shadow-xl p-[40px]">
+                    <img class="min-h-[178px] border-[2px] border-dashed border-[rgba(17,17,17,0.1)]" src="./images/ellipse.png" alt="Shoes" />
+
+                    <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
+                        <h2 class="-title text-2xl font-bold">Ellipse</h2>
+                        <p class="text-[rgb(65,65,65)]">Area (A) = 0.5xbx0.5b</p>
+
+                        <div class="flex max-w-full items-center gap-2">
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <span>cm</span>
+                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
+                            <span>cm</span>
+                        </div>
+
+                        <div class="w-full">
+                            <button class="w-full btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Area calculation container -->
+            <div class="w-[400px] h-[454px] border-2 border-[rgba(17,17,17,0.1)] rounded-md font-bold p-[30px]">
+                <h3 class="text-xl text-[rgba(17,17,17,0.8)] text-center underline">Area Calculation</h3>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
