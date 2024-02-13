@@ -46,6 +46,9 @@
                             <input id="th" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
                             <span>cm</span>
                         </div>
+                        <div>
+                            <p>Area: <span id="tarea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class="w-full">
                             <button onclick="calculateTriangleArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
@@ -68,9 +71,11 @@
                             <input id="rl" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="l">
                             <span>cm</span>
                         </div>
-
+                        <div>
+                            <p>Area: <span id="rarea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class="w-full">
-                            <button class="w-full btn btn-primary">Calculate</button>
+                            <button onclick="calculateRectangleArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
 
                     </div>
@@ -84,14 +89,17 @@
                         <p class="text-[rgb(65,65,65)]">Area = b X h</p>
 
                         <div class="flex max-w-full items-center gap-2">
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <input id="pb" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
                             <span>cm</span>
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
+
+                            <input id="ph" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
                             <span>cm</span>
                         </div>
-
+                        <div>
+                            <p>Area: <span id="parea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class="w-full">
-                            <button class="w-full btn btn-primary">Calculate</button>
+                            <button onclick="calculateParallelogramArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -104,14 +112,17 @@
                         <p class="text-[rgb(65,65,65)]">Area = 0.5 X d1 X d2</p>
                         
                         <div class="flex max-w-full items-center gap-2">
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d1">
+                            <input id="rd1" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d1">
                             <span>cm</span>
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d2">
+
+                            <input id="rd2" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="d2">
                             <span>cm</span>
                         </div>
-
+                        <div>
+                            <p>Area: <span id="rharea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class=" w-full">
-                            <button class="w-full btn btn-primary">Calculate</button>
+                            <button onclick="calculateRhombusArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -125,14 +136,17 @@
                         <p class="text-[rgb(65,65,65)]">Area = 0.5 X p X b</p>
 
                         <div class="flex max-w-full items-center gap-2">
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="p">
+                            <input id="pep" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="p">
                             <span>cm</span>
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+
+                            <input id="peb" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
                             <span>cm</span>
                         </div>
-
+                        <div>
+                            <p>Area: <span id="pearea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class="w-full">
-                            <button class="w-full btn btn-primary">Calculate</button>
+                            <button onclick="calculatePentagonArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -142,17 +156,20 @@
 
                     <div class="w-full space-y-[20px] flex flex-col justify-center items-center">
                         <h2 class="-title text-2xl font-bold">Ellipse</h2>
-                        <p class="text-[rgb(65,65,65)]">Area (A) = 0.5xbx0.5b</p>
+                        <p class="text-[rgb(65,65,65)]">Area = PI X a X b</p>
 
                         <div class="flex max-w-full items-center gap-2">
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
+                            <input id="ea" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="a">
                             <span>cm</span>
-                            <input class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="h">
+
+                            <input id="eb" class="min-w-[73px] p-2 bg-[rgb(241,241,241)] rounded-[4px]" type="text" placeholder="b">
                             <span>cm</span>
                         </div>
-
+                        <div>
+                            <p>Area: <span id="earea"></span>cm<sup>2</sup></p>
+                        </div>
                         <div class="w-full">
-                            <button class="w-full btn btn-primary">Calculate</button>
+                            <button onclick="calculateEllipseArea()" class="w-full btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
